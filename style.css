@@ -1,0 +1,193 @@
+:root{
+--main-color:#181818;
+}
+body{
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #181818;
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+header{
+    padding-top: 10px;
+    background: rgba(0, 0, 0, 0) /* Green background with 30% opacity */;
+    z-index:9999;
+    color: white;
+    position: relative;
+}
+@media only screen and (max-width: 600px) {
+    header >div {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .landing{
+        top: -110px;
+    }
+  }
+header >div{
+    justify-content: space-between;
+}
+.main-title p{
+    font-weight: bold;
+    font-size: 24px;
+}
+.main-title p span{
+    color: #8758FF;
+    display: inline-block;
+    animation: bounce 1s alternate infinite;
+}
+.contacts{
+    width: 100px;
+}
+.contacts ul{
+    justify-content: space-between;
+    font-size: 22px;
+}
+.contacts ul li {
+    padding: 0 5px;
+}
+.contacts ul li a {
+    cursor: pointer;
+    color: white;
+}
+
+.landing{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--main-color);
+    position: relative;
+    top: -60px;
+    color: white;
+}
+@media only screen and (max-width: 600px) {
+    .landing{
+        top: -110px;
+        text-align: center;
+    }
+    nav{
+        margin-left: -65px;
+    }
+}
+.my-photo{
+    width: 350px;
+    height: 90%;
+    position: absolute;
+    background-color: #434242;
+    right: 70px;
+    overflow: hidden;
+    box-shadow: 10px 5px #8888;
+    border-left: 1px dashed white;
+}
+@media only screen and (max-width:600px) 
+{
+    .my-photo{
+        right: 25px;
+    }    
+}
+.landing .my-photo img{
+    width: 350px;
+    height: 600px;
+    float: right;
+    opacity: 0.9;
+    position: relative;
+    top: -38px;
+    right: 0px;
+    filter: grayscale(1);
+    transition: 2s ease-in-out ;
+}
+.landing .my-photo:hover img{
+   
+    filter: grayscale(0);
+    transform: scale(1.5);
+}
+.intro{
+    transform: translatey(150%);
+    position: relative;
+}
+.intro .hello{
+    position: relative;
+}
+.intro .hello::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 300px;
+    background-color: #22A39F;
+    bottom: -10px;
+    right: 70%;
+}
+@media only screen and (max-width: 600px) {
+    .intro{
+        transform: translatey(215%);}
+}
+.landing::after {
+    content: '';
+    width: 90%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    left: 5%;
+}
+/*Skills section*/
+.skills .container .row .skill  {
+    font-size: 70px;
+}
+#icon:hover{
+    color: attr(-color);
+}
+/******projects section*******/
+.projects .container .row .project .project-img{
+    width: 100%;
+    height: 300px;
+}
+.projects .container .row .project .project-add{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.projects .container .row .project .specifcs{
+    transform: translateY(-15px);
+}
+.projects .container .row .project .specifcs span{
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #D7C0AE;
+
+}
+.projects .container .row .project .btns{
+    display: flex;
+    justify-content: space-between;
+}
+.projects .container .row .project .btns button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-bottom: 2px solid #22A39F;
+    padding: 10px;
+}
+.projects .container .row .project .btns button a{
+    text-decoration: none;
+    color: white;
+}
+.footer{
+    background-color: #434242;
+}
+
+/*animations*/
+@keyframes bounce {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
