@@ -71,7 +71,9 @@ header >div{
         text-align: center;
     }
     nav{
-        margin-left: -65px;
+        margin-right: -70%;    }
+    .main-title{
+        transform: translateX(30px);
     }
 }
 .my-photo{
@@ -125,6 +127,18 @@ header >div{
 @media only screen and (max-width: 600px) {
     .intro{
         transform: translatey(215%);}
+    .intro .hello::before{
+            right: 10%;
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 300px;
+            background-color: #22A39F;
+            bottom: -10px;
+        }
+        .intro  .who{
+            transform: translateX(14px);
+        }
 }
 .landing::after {
     content: '';
